@@ -9,8 +9,8 @@
   <header class="site-header admin-header"><a class="brand" href="index.html"><span class="brand-mark">N<span>26</span></span><span class="brand-name">NANI<span>26</span></span></a><a class="back-home" href="index.html">← Back to website</a></header>
   <main class="admin-shell">
     <div class="admin-intro"><span class="section-index">NANI26 / CONTENT MANAGEMENT</span><h1>Article <span class="gradient-text">studio.</span></h1><p>Sign in to write, edit and publish learning notes on your website.</p></div>
-    
-    <section class="admin-login panel" id="loginPanel"><div class="panel-heading"><span class="panel-icon">⌑</span><div><h2>Admin sign in</h2><p>Only your configured admin account can manage articles.</p></div></div><form id="loginForm" class="form-stack"><label>Email address<input id="loginEmail" type="email" autocomplete="username" required placeholder="admin@example.com"></label><label>Password<input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Your admin password"></label><button class="btn btn-primary btn-full" type="submit">Sign in <span>↗</span></button><p class="form-message" id="loginMessage" aria-live="polite"></p></form></section>
+    <div class="setup-warning" id="setupWarning"><b>One-time setup required</b><span>Connect your Supabase project in <code>assets/js/config.js</code> and run <code>supabase/schema.sql</code>. Follow the README included with this website.</span></div>
+    <section class="admin-login panel" id="loginPanel"><div class="panel-heading"><span class="panel-icon">⌑</span><div><h2>Admin sign in</h2><p>Only your configured admin account can manage articles.</p></div></div><form id="loginForm" class="form-stack"><label>Email address<input id="loginEmail" type="email" autocomplete="username" required placeholder="admin@example.com"></label><label>Password<input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Your admin password"></label><button class="btn btn-primary btn-full" type="submit">Sign in securely <span>↗</span></button><p class="form-message" id="loginMessage" aria-live="polite"></p></form></section>
     <section class="admin-dashboard hidden" id="dashboardPanel">
       <div class="dashboard-top"><div><span class="live-label"><i></i> AUTHENTICATED</span><h2>Welcome to your workspace.</h2><p id="adminIdentity"></p></div><button class="btn btn-ghost" id="logoutButton" type="button">Sign out</button></div>
       <div class="admin-grid">
@@ -20,7 +20,7 @@
         <section class="panel library-panel"><div class="panel-heading"><span class="panel-icon">▤</span><div><h2>Your articles</h2><p>Published articles and drafts.</p></div></div><div id="adminArticles" class="admin-articles"><p class="muted-text">Sign in to load your articles.</p></div></section>
       </div>
     </section>
-    <p class="admin-security-note">Learning mode: this demo checks hardcoded credentials in browser JavaScript and saves articles in this browser only. Do not use this approach for a public production website.</p>
+    <p class="admin-security-note">Security: this dashboard uses Supabase authentication and database Row Level Security. Never put a Supabase service-role key in this website.</p>
   </main>
   <script type="module" src="assets/js/admin.js"></script>
 </body>

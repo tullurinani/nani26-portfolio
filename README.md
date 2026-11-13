@@ -1,44 +1,50 @@
-# NANI26 Portfolio
+# NANI26 Portfolio — editorial 3D refresh
 
-A responsive portfolio website with a simple learning-mode admin dashboard. This version does not connect to Supabase or any external authentication/database service.
+This is the redesigned static portfolio for `https://nani26.shop`.
 
-## Run locally
+## What changed
 
-1. Extract the ZIP file.
-2. Open the `nani26-portfolio` folder in VS Code.
-3. Install/use the VS Code **Live Server** extension.
-4. Right-click `index.html` and choose **Open with Live Server**.
-5. Open `admin.html` from the website or visit `http://127.0.0.1:5500/admin.html` (the port may differ).
+- Warm paper, charcoal, terracotta and olive palette instead of the previous dark neon palette.
+- Editorial typography and more personal, grounded copy.
+- CSS 3D identity-card sculpture with pointer tilt and subtle floating motion.
+- Scroll reveal, ticker movement and project-card depth interactions.
+- Responsive navigation and layouts for desktop, tablet and mobile.
+- The AI-generated portrait has been removed from the visible design.
+- Existing experience, skills, project notes, article dialog and Supabase article-loading logic are retained.
+- Google Analytics 4 tag is included once in `index.html` using Measurement ID `G-GFWPRP09K7`.
 
-Use a local web server because the JavaScript files use ES modules. Do not open the HTML files directly with `file://`.
+## Publish to the existing GitHub repository
 
-## Learning-mode admin login
+1. Extract this ZIP on your computer.
+2. Open the extracted folder. The files `index.html`, `admin.html`, `CNAME`, `assets/`, and `supabase/` should be directly inside it.
+3. Open the GitHub repository `tullurinani/nani26-portfolio`.
+4. Use **Add file → Upload files**.
+5. Upload the contents of this folder (not the ZIP file and not the outer folder).
+6. Commit the changes to the `main` branch.
+7. Wait for GitHub Pages to deploy, then open `https://nani26.shop` and hard-refresh with `Ctrl + Shift + R`.
 
-The demo credentials are hardcoded in `assets/js/config.js`. The admin login compares the entered email and password with those values:
+Keep the repository, GitHub Pages branch setting, custom domain, and GoDaddy DNS records. The included `CNAME` file contains `nani26.shop`.
 
-- Correct credentials: the admin dashboard opens.
-- Incorrect credentials: access is rejected and an error is displayed.
-- Sign out: clears the current tab's demo session.
+## Analytics
 
-This is intentionally a beginner exercise, not secure authentication. Anyone can inspect browser JavaScript and find hardcoded credentials. Do not deploy this version with real or reused passwords, and do not use it to protect sensitive information.
+The homepage includes the GA4 tag `G-GFWPRP09K7`. In Google Analytics, use the web data stream for `https://nani26.shop` (not the `www` alias), then check **Reports → Realtime** after visiting the site. Do not add a second GA4 snippet or a second GTM container snippet to the page.
 
-## Article storage
+## Article studio
 
-Articles are stored in the browser's `localStorage` under the key `nani26_articles`.
+`admin.html` and the Supabase article dashboard are retained. The article studio still requires your own Supabase project and the setup described in `supabase/schema.sql`. Do not put a Supabase service-role key in `assets/js/config.js`; only a publishable/anon browser key may be used with correct Row Level Security policies.
 
-- Create, edit and delete articles from `admin.html`.
-- Tick **Publish immediately** to show an article in the public portfolio.
-- Unpublished articles remain drafts in the admin dashboard.
-- Data is local to that browser and device. It is not shared with visitors or synchronized across devices.
-- Clearing browser site data may delete the saved articles.
+## Customization
 
-## Where to learn the code
+Edit `assets/js/config.js` to add your own email and LinkedIn profile URLs. The GitHub profile is set to `https://github.com/tullurinani`.
 
-- `admin.html` — admin login and dashboard interface.
-- `assets/js/config.js` — demo email/password and public contact links.
-- `assets/js/admin.js` — credential comparison, session handling, and article create/read/update/delete logic.
-- `assets/js/app.js` — public portfolio behavior and published article display.
+## Local preview
 
-## Later upgrade
+From this folder run:
 
-When you are comfortable with JavaScript authentication concepts, replace the demo login and local storage with a proper backend authentication provider and database. Never rely on hardcoded browser credentials for a publicly deployed admin system.
+```bash
+python -m http.server 5500
+```
+
+Then open `http://localhost:5500`.
+
+The 3D artwork and animations are built with CSS and browser JavaScript; no large 3D framework or build step is required. Reduced-motion preferences are respected.
