@@ -1,0 +1,47 @@
+name: Project checks
+
+on:
+  push:
+    paths:
+      - "projects/driver-drowsiness-detection/**"
+      - "projects/paddy-crop-disease-detection/**"
+      - ".github/workflows/projects.yml"
+  pull_request:
+    paths:
+      - "projects/driver-drowsiness-detection/**"
+      - "projects/paddy-crop-disease-detection/**"
+      - ".github/workflows/projects.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  driver-drowsiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install -r projects/driver-drowsiness-detection/requirements.txt
+      - name: Run detector tests
+        working-directory: projects/driver-drowsiness-detection
+        run: python -m unittest discover -s tests -v
+      - name: Compile Python files
+        run: python -m compileall -q projects/driver-drowsiness-detection
+
+  paddy-classifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test dependencies
+        run: python -m pip install "numpy>=1.26,<3" "Pillow>=10,<13"
+      - name: Run preprocessing tests
+        working-directory: projects/paddy-crop-disease-detection
+        run: python -m unittest discover -s tests -v
+      - name: Compile Python files
+        run: python -m compileall -q projects/paddy-crop-disease-detection
