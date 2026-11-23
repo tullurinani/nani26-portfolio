@@ -24,7 +24,8 @@
         <h1>Paddy Crop Disease <span class="project-gradient">Detection.</span></h1>
         <p class="project-lead">A rice-leaf classification project with a clean Streamlit upload interface and a TensorFlow MobileNetV2 transfer-learning pipeline. Add a labelled dataset and train your own model before using predictions.</p>
         <div class="project-actions">
-          <a class="project-btn" href="https://github.com/tullurinani/nani26-portfolio/tree/main/projects/paddy-crop-disease-detection" target="_blank" rel="noopener noreferrer">View source code ↗</a>
+          <a class="project-btn" href="https://paddy.nani.shop" target="_blank" rel="noopener noreferrer">Open hosted interface ↗</a>
+          <a class="project-btn secondary" href="https://github.com/tullurinani/nani26-portfolio/tree/main/projects/paddy-crop-disease-detection" target="_blank" rel="noopener noreferrer">View source code ↗</a>
           <a class="project-btn secondary" href="/">Back to portfolio</a>
         </div>
       </div>
@@ -72,7 +73,7 @@ streamlit run app.py</pre>
       <p class="project-section-intro">Training creates a model file and class-name metadata in the models folder. The first training run downloads MobileNetV2 ImageNet weights, so an internet connection is needed unless those weights are already cached.</p>
     </section>
 
-    <div class="project-notice"><strong>Model status:</strong> This repository does not include a labelled rice-leaf dataset or trained model weights. The six automated tests validate preprocessing, class-name loading and prediction ranking; they do not measure disease-classification accuracy. No 92% accuracy claim is made for this new implementation. Evaluate a trained model on a separate held-out test set before using it. This project is a learning aid, not an agronomic diagnosis or treatment recommendation.</div>
+    <div class="project-notice"><strong>Deployment status:</strong> The Streamlit interface is deployed at <a href="https://paddy.nani.shop">paddy.nani.shop</a>; the custom domain is waiting for DNS verification. This hosted interface does not include a trained model. This repository does not include a labelled rice-leaf dataset or trained model weights. The six automated tests validate preprocessing, class-name loading and prediction ranking; they do not measure disease-classification accuracy. No 92% accuracy claim is made for this new implementation. Evaluate a trained model on a separate held-out test set before using it. This project is a learning aid, not an agronomic diagnosis or treatment recommendation.</div>
   </main>
   <footer class="project-footer"><span>© <span id="year"></span> Nani Tulluri</span><a href="https://github.com/tullurinani/nani26-portfolio/tree/main/projects/paddy-crop-disease-detection" target="_blank" rel="noopener noreferrer">GitHub source ↗</a></footer>
 </div>
