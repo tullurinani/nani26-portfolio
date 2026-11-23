@@ -76,3 +76,10 @@ The six tests do not require TensorFlow. They validate preprocessing and predict
 ## Limitations
 
 The classifier can only predict classes it was trained on. Image quality, background, lighting, dataset imbalance and incorrect labels can reduce accuracy. Treat its output as an initial screening aid, not an agronomic diagnosis or treatment recommendation.
+
+
+## Deploy the Streamlit interface
+
+A Dockerfile and Railway configuration are included. Create a Railway service from the portfolio repository and set its **Root Directory** to `/projects/paddy-crop-disease-detection`. Railway can then build the Dockerfile in this folder and publish the Streamlit interface.
+
+The interface can be hosted before model training, but it will explicitly show that no trained model is available. This repository does not contain a trained model or labelled rice-leaf dataset. Uploading a photo to the hosted page will not produce a valid disease classification until you train the model with a correctly labelled dataset and add the resulting `models/rice_disease_model.keras` and `models/class_names.json` files to the deployment. Do not claim an accuracy value until you evaluate the trained model on held-out data.
