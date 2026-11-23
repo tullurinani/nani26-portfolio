@@ -24,7 +24,8 @@
         <h1>Resume Analyzer <span class="project-gradient">AI.</span></h1>
         <p class="project-lead">A recruitment workflow learning project that parses PDF and DOCX resumes, extracts useful profile signals, prepares interview prompts and lets authorised staff review candidate submissions.</p>
         <div class="project-actions">
-          <a class="project-btn" href="https://github.com/tullurinani/Resume-Analyzer" target="_blank" rel="noopener noreferrer">View source code ↗</a>
+          <a class="project-btn" href="https://resume.nani.shop" target="_blank" rel="noopener noreferrer">Open hosted demo ↗</a>
+          <a class="project-btn secondary" href="https://github.com/tullurinani/Resume-Analyzer" target="_blank" rel="noopener noreferrer">View source code ↗</a>
           <a class="project-btn secondary" href="/">Back to portfolio</a>
         </div>
       </div>
@@ -54,7 +55,7 @@
 
     <section class="project-section">
       <h2>Run locally</h2>
-      <p class="project-section-intro">The repository contains the application source. It is not hosted as a live recruitment application from this portfolio page.</p>
+      <p class="project-section-intro">The Django application is deployed at <a href="https://resume.nani.shop">resume.nani.shop</a>; the custom domain will open after DNS verification. To run a local copy, use the commands below.</p>
       <pre class="project-code">py -3.12 -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
@@ -65,7 +66,7 @@ python manage.py runserver</pre>
       <p class="project-section-intro">Open http://127.0.0.1:8000/ after the development server starts. Use the staff account created with createsuperuser to access the review dashboard.</p>
     </section>
 
-    <div class="project-notice"><strong>Privacy and responsible use:</strong> This is a learning project, not a production recruitment platform. Candidate resumes and interview recordings are private personal data. The application now uses hashed candidate passwords, staff-only review endpoints and authenticated file routes. Production use still requires a security review, HTTPS, private storage, access auditing, retention controls and a clear consent process. It should not make hiring decisions automatically.</div>
+    <div class="project-notice"><strong>Privacy and responsible use:</strong> This is a learning project, not a production recruitment platform. The GitHub repository remains public and its older history needs to be cleaned and made private before any real candidate data is used. Use synthetic test data only for now. Candidate resumes and interview recordings are private personal data. The application now uses hashed candidate passwords, staff-only review endpoints and authenticated file routes. Production use still requires a security review, HTTPS, private storage, access auditing, retention controls and a clear consent process. It should not make hiring decisions automatically.</div>
   </main>
   <footer class="project-footer"><span>© <span id="year"></span> Nani Tulluri</span><a href="https://github.com/tullurinani/Resume-Analyzer" target="_blank" rel="noopener noreferrer">GitHub source ↗</a></footer>
 </div>
