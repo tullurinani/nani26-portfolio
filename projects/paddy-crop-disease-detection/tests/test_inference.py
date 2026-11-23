@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from inference import load_class_names, prepare_image, rank_predictions
+from inference import load_class_names, load_classifier, prepare_image, rank_predictions
 
 
 class InferenceTests(unittest.TestCase):
@@ -17,6 +17,12 @@ class InferenceTests(unittest.TestCase):
         self.assertTrue(np.isfinite(batch).all())
         self.assertGreaterEqual(float(batch.min()), -1.0)
         self.assertLessEqual(float(batch.max()), 1.0)
+
+    def test_missing_model_is_reported_before_tensorflow_is_needed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            model_path = Path(tmp) / "missing.keras"
+            with self.assertRaises(FileNotFoundError):
+                load_classifier(model_path)
 
     def test_load_class_names(self):
         with tempfile.TemporaryDirectory() as tmp:
