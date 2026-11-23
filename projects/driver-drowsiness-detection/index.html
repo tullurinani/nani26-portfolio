@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="Driver Drowsiness Detection — a Python desktop computer-vision prototype using OpenCV Haar cascades and Tkinter.">
+  <title>Driver Drowsiness Detection | NANI26 Projects</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/project-pages.css">
+</head>
+<body class="project-page">
+<div class="project-wrap">
+  <header class="project-header">
+    <a class="project-brand" href="/"><span class="project-mark">N26</span><span>NANI26 / PROJECTS</span></a>
+    <nav class="project-nav"><a href="/#projects">All projects</a><a href="/#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="project-hero">
+      <div>
+        <div class="project-eyebrow">COMPUTER VISION · DESKTOP APP · PYTHON</div>
+        <h1>Driver Drowsiness <span class="project-gradient">Detection.</span></h1>
+        <p class="project-lead">A clean desktop prototype that uses a webcam and OpenCV Haar cascades to detect a face and eyes, track sustained eye non-detection and display an advisory alert.</p>
+        <div class="project-actions">
+          <a class="project-btn" href="https://github.com/tullurinani/nani26-portfolio/tree/main/projects/driver-drowsiness-detection" target="_blank" rel="noopener noreferrer">View source code ↗</a>
+          <a class="project-btn secondary" href="/">Back to portfolio</a>
+        </div>
+      </div>
+      <div class="project-art" aria-hidden="true"><span class="art-orbit"></span><span class="art-node">DG</span><span class="art-caption">CAMERA · DETECTION · ALERT</span></div>
+    </section>
+
+    <section class="project-stats">
+      <div class="project-stat"><strong>OpenCV</strong><span>Face and eye detection</span></div>
+      <div class="project-stat"><strong>Tkinter</strong><span>Desktop interface</span></div>
+      <div class="project-stat"><strong>6 tests passed</strong><span>Monitor state machine</span></div>
+    </section>
+
+    <section class="project-section">
+      <h2>How the prototype works</h2>
+      <div class="project-grid">
+        <article class="project-card"><b>Camera input</b><p>Reads frames from the default webcam and mirrors the preview for a familiar front-camera view.</p></article>
+        <article class="project-card"><b>Face and eye detection</b><p>Uses OpenCV Haar cascade classifiers to locate the largest face and search for eyes in the upper face region.</p></article>
+        <article class="project-card"><b>Alert state machine</b><p>Tracks how long eyes are not detected while a face remains visible and triggers one alert per sustained episode.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Technology stack</h2>
+      <span class="project-chip">Python 3.10+</span><span class="project-chip">OpenCV</span><span class="project-chip">Haar Cascades</span><span class="project-chip">Tkinter</span><span class="project-chip">Pillow</span><span class="project-chip">unittest</span>
+    </section>
+
+    <section class="project-section">
+      <h2>Run locally on Windows</h2>
+      <pre class="project-code">py -3.12 -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python app.py</pre>
+      <p class="project-section-intro">Connect a webcam and allow camera access in your operating system. The app opens as a desktop window; it does not run inside the portfolio website.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Automated tests</h2>
+      <pre class="project-code">python -m unittest discover -s tests -v</pre>
+      <p class="project-section-intro">The tests cover the monitor state machine: awake, early eye non-detection, sustained alert, reset after eyes return, lost-face reset and invalid threshold handling. The webcam feed itself needs a manual test on the target computer.</p>
+    </section>
+
+    <div class="project-notice"><strong>Important safety limitation:</strong> This is an educational prototype, not a certified driver-monitoring or driver-assistance device. Haar cascades can miss eyes because of lighting, glasses, face angle or camera quality. Do not rely on it to prevent accidents and never operate or test it while driving.</div>
+  </main>
+  <footer class="project-footer"><span>© <span id="year"></span> Nani Tulluri</span><a href="https://github.com/tullurinani/nani26-portfolio/tree/main/projects/driver-drowsiness-detection" target="_blank" rel="noopener noreferrer">GitHub source ↗</a></footer>
+</div>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
