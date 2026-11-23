@@ -46,3 +46,10 @@ A real camera check is still needed on the target computer. This environment val
 5. If the interval reaches 1.8 seconds, the UI displays an advisory alert and beeps once until eyes are detected again.
 
 This heuristic is sensitive to lighting, glasses, camera placement and head movement. Do not interpret its output as medical advice or a reliable driving warning.
+
+
+## Browser demo
+
+The `web/` folder contains a separate static browser version that can be served from GitHub Pages. Open the project page and select **Try browser demo**. It requests camera permission, runs MediaPipe Face Landmarker in the browser and checks for prolonged eye closure. It does not send camera video to this site's server.
+
+Use a current browser over HTTPS, allow camera access and test only while stationary. The MediaPipe SDK and model are loaded from their published CDN/model endpoints. This remains an educational experiment, not a certified driver-monitoring system. The original Python/OpenCV/Tkinter desktop application remains available through `python app.py`.
