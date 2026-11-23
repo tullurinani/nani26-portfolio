@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b17">
+  <meta name="description" content="Browser-based driver drowsiness demo. Camera processing runs locally in your browser.">
+  <title>Driver Alert · Browser Demo</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/"><span class="mark">N26</span><span>NANI26 / LIVE DEMO</span></a>
+      <a class="back" href="../">Project overview ↗</a>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">COMPUTER VISION · BROWSER DEMO</p>
+      <h1>Stay <span>alert.</span></h1>
+      <p class="lede">A browser-based demonstration that checks facial landmarks and prolonged eye closure using your camera.</p>
+    </section>
+
+    <section class="workspace" aria-label="Drowsiness detection demo">
+      <div class="camera-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">LIVE CAMERA</p><h2>Camera preview</h2></div>
+          <span class="live-pill"><span class="live-dot"></span><span id="cameraLabel">Camera off</span></span>
+        </div>
+        <div class="camera-frame">
+          <video id="video" autoplay muted playsinline></video>
+          <div class="camera-placeholder" id="placeholder">
+            <div class="camera-icon">◎</div>
+            <strong>Your camera preview will appear here</strong>
+            <span>Start the demo and allow camera access when your browser asks.</span>
+          </div>
+          <div class="camera-state" id="cameraState">WAITING FOR CAMERA</div>
+        </div>
+        <div class="controls">
+          <button id="startBtn" class="primary">Start camera demo</button>
+          <button id="stopBtn" class="secondary" disabled>Stop</button>
+        </div>
+        <p class="privacy">Camera frames are analysed in this browser and are not uploaded to this site.</p>
+      </div>
+
+      <aside class="status-panel">
+        <p class="eyebrow">DETECTION STATUS</p>
+        <div class="status-orb" id="statusOrb"><span>●</span></div>
+        <h2 id="statusTitle">Not started</h2>
+        <p class="status-copy" id="statusCopy">Start the camera to initialise the face landmark model.</p>
+        <div class="timer-box">
+          <span>Continuous eye-closure time</span>
+          <strong id="timer">0.0s</strong>
+        </div>
+        <div class="metrics">
+          <div><span>Alerts this session</span><strong id="alertCount">0</strong></div>
+          <div><span>Detection threshold</span><strong>1.8 sec</strong></div>
+        </div>
+        <p class="model-note" id="modelStatus">Model not loaded</p>
+      </aside>
+    </section>
+
+    <section class="details">
+      <article><span class="number">01</span><h3>Face landmarks</h3><p>MediaPipe Face Landmarker estimates facial landmarks and eye-blink blendshape scores in the browser.</p></article>
+      <article><span class="number">02</span><h3>Closed-eye timer</h3><p>A short blink does not trigger an alert. The timer watches for continuous closure lasting at least 1.8 seconds.</p></article>
+      <article><span class="number">03</span><h3>Advisory alert</h3><p>A possible prolonged eye-closure warning sounds once per episode and resets when the eyes reopen.</p></article>
+    </section>
+
+    <div class="warning">
+      <strong>Safety notice</strong>
+      <p>This is an educational demonstration, not a certified driver-monitoring system. It can produce false positives and missed detections. Test only while stationary. Never use a phone or this demo while driving, and never rely on it to prevent an accident.</p>
+    </div>
+    <footer>© <span id="year"></span> Nani Tulluri · <a href="https://developers.google.com/edge/mediapipe/solutions/vision/face_landmarker" target="_blank" rel="noopener noreferrer">MediaPipe Face Landmarker documentation</a></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
