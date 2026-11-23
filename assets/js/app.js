@@ -1,4 +1,9 @@
-import { PROFILE } from "./config.js";
+const PROFILE = {
+  email: "tullurinani26@gmail.com",
+  linkedin: "https://www.linkedin.com/in/nanitulluri/",
+  github: "https://github.com/tullurinani",
+  phone: "7675851745"
+};
 
 const $ = (selector) => document.querySelector(selector);
 const menuToggle = $("#menuToggle");
