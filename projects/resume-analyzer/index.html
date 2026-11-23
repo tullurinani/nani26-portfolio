@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="Resume Analyzer AI — a Django learning project for resume parsing, interview prompts and staff-led candidate review.">
+  <title>Resume Analyzer AI | NANI26 Projects</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/project-pages.css">
+</head>
+<body class="project-page">
+<div class="project-wrap">
+  <header class="project-header">
+    <a class="project-brand" href="/"><span class="project-mark">N26</span><span>NANI26 / PROJECTS</span></a>
+    <nav class="project-nav"><a href="/#projects">All projects</a><a href="/#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="project-hero">
+      <div>
+        <div class="project-eyebrow">WEB APPLICATION · DJANGO · PYTHON</div>
+        <h1>Resume Analyzer <span class="project-gradient">AI.</span></h1>
+        <p class="project-lead">A recruitment workflow learning project that parses PDF and DOCX resumes, extracts useful profile signals, prepares interview prompts and lets authorised staff review candidate submissions.</p>
+        <div class="project-actions">
+          <a class="project-btn" href="https://github.com/tullurinani/Resume-Analyzer" target="_blank" rel="noopener noreferrer">View source code ↗</a>
+          <a class="project-btn secondary" href="/">Back to portfolio</a>
+        </div>
+      </div>
+      <div class="project-art" aria-hidden="true"><span class="art-orbit"></span><span class="art-node">AI</span><span class="art-caption">RESUME · REVIEW · INTERVIEW</span></div>
+    </section>
+
+    <section class="project-stats">
+      <div class="project-stat"><strong>Python / Django</strong><span>Backend framework</span></div>
+      <div class="project-stat"><strong>PDF / DOCX</strong><span>Resume input formats</span></div>
+      <div class="project-stat"><strong>Staff review</strong><span>Role-protected dashboard</span></div>
+    </section>
+
+    <section class="project-section">
+      <h2>What the project does</h2>
+      <p class="project-section-intro">The application demonstrates a structured flow from candidate registration through resume upload and interview practice to staff review.</p>
+      <div class="project-grid">
+        <article class="project-card"><b>Resume parsing</b><p>Extracts document text and looks for skills, education and experience signals in a PDF or DOCX file.</p></article>
+        <article class="project-card"><b>Interview prompts</b><p>Generates explainable, rule-based questions from the skills and details found in the uploaded resume.</p></article>
+        <article class="project-card"><b>Review workflow</b><p>Provides a staff-only dashboard for viewing candidate submissions and updating application status.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Technology stack</h2>
+      <span class="project-chip">Python</span><span class="project-chip">Django 5.2 LTS</span><span class="project-chip">SQLite / MySQL</span><span class="project-chip">pypdf</span><span class="project-chip">python-docx</span><span class="project-chip">HTML</span><span class="project-chip">CSS</span><span class="project-chip">JavaScript</span>
+    </section>
+
+    <section class="project-section">
+      <h2>Run locally</h2>
+      <p class="project-section-intro">The repository contains the application source. It is not hosted as a live recruitment application from this portfolio page.</p>
+      <pre class="project-code">py -3.12 -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver</pre>
+      <p class="project-section-intro">Open http://127.0.0.1:8000/ after the development server starts. Use the staff account created with createsuperuser to access the review dashboard.</p>
+    </section>
+
+    <div class="project-notice"><strong>Privacy and responsible use:</strong> This is a learning project, not a production recruitment platform. Candidate resumes and interview recordings are private personal data. The application now uses hashed candidate passwords, staff-only review endpoints and authenticated file routes. Production use still requires a security review, HTTPS, private storage, access auditing, retention controls and a clear consent process. It should not make hiring decisions automatically.</div>
+  </main>
+  <footer class="project-footer"><span>© <span id="year"></span> Nani Tulluri</span><a href="https://github.com/tullurinani/Resume-Analyzer" target="_blank" rel="noopener noreferrer">GitHub source ↗</a></footer>
+</div>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
