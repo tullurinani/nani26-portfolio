@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta name="description" content="Paddy Crop Disease Detection — a Streamlit and TensorFlow rice-leaf classifier with MobileNetV2 training pipeline.">
+  <title>Paddy Crop Disease Detection | NANI26 Projects</title>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/project-pages.css">
+</head>
+<body class="project-page">
+<div class="project-wrap">
+  <header class="project-header">
+    <a class="project-brand" href="/"><span class="project-mark">N26</span><span>NANI26 / PROJECTS</span></a>
+    <nav class="project-nav"><a href="/#projects">All projects</a><a href="/#contact">Contact</a></nav>
+  </header>
+  <main>
+    <section class="project-hero">
+      <div>
+        <div class="project-eyebrow">MACHINE LEARNING · IMAGE CLASSIFICATION</div>
+        <h1>Paddy Crop Disease <span class="project-gradient">Detection.</span></h1>
+        <p class="project-lead">A rice-leaf classification project with a clean Streamlit upload interface and a TensorFlow MobileNetV2 transfer-learning pipeline. Add a labelled dataset and train your own model before using predictions.</p>
+        <div class="project-actions">
+          <a class="project-btn" href="https://github.com/tullurinani/nani26-portfolio/tree/main/projects/paddy-crop-disease-detection" target="_blank" rel="noopener noreferrer">View source code ↗</a>
+          <a class="project-btn secondary" href="/">Back to portfolio</a>
+        </div>
+      </div>
+      <div class="project-art" aria-hidden="true"><span class="art-orbit"></span><span class="art-node">🌾</span><span class="art-caption">LEAF IMAGE · CLASSIFICATION</span></div>
+    </section>
+
+    <section class="project-stats">
+      <div class="project-stat"><strong>Streamlit</strong><span>Image-upload UI</span></div>
+      <div class="project-stat"><strong>MobileNetV2</strong><span>Transfer-learning model</span></div>
+      <div class="project-stat"><strong>6 tests passed</strong><span>Preprocessing and ranking</span></div>
+    </section>
+
+    <section class="project-section">
+      <h2>What is included</h2>
+      <div class="project-grid">
+        <article class="project-card"><b>Image preparation</b><p>Corrects image orientation, converts to RGB, resizes to 224 × 224 and applies MobileNetV2 preprocessing.</p></article>
+        <article class="project-card"><b>Training pipeline</b><p>Uses folder-per-class images, train / validation split, augmentation, frozen MobileNetV2 feature extraction and early stopping.</p></article>
+        <article class="project-card"><b>Prediction interface</b><p>Shows the top class and confidence values from your trained model, with a clear missing-model state before training.</p></article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Technology stack</h2>
+      <span class="project-chip">Python</span><span class="project-chip">TensorFlow / Keras</span><span class="project-chip">MobileNetV2</span><span class="project-chip">Streamlit</span><span class="project-chip">Pillow</span><span class="project-chip">NumPy</span>
+    </section>
+
+    <section class="project-section">
+      <h2>Prepare your dataset</h2>
+      <p class="project-section-intro">Place labelled images into one folder per class. Use class labels that match your dataset and licence; the sample below is only an example of the folder structure.</p>
+      <pre class="project-code">data/
+└── rice-leaf-disease/
+    ├── healthy/
+    ├── leaf_blast/
+    └── brown_spot/</pre>
+    </section>
+
+    <section class="project-section">
+      <h2>Install, train and run</h2>
+      <pre class="project-code">py -3.12 -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+
+python train.py --data data/rice-leaf-disease --epochs 12 --batch-size 32
+streamlit run app.py</pre>
+      <p class="project-section-intro">Training creates a model file and class-name metadata in the models folder. The first training run downloads MobileNetV2 ImageNet weights, so an internet connection is needed unless those weights are already cached.</p>
+    </section>
+
+    <div class="project-notice"><strong>Model status:</strong> This repository does not include a labelled rice-leaf dataset or trained model weights. The six automated tests validate preprocessing, class-name loading and prediction ranking; they do not measure disease-classification accuracy. No 92% accuracy claim is made for this new implementation. Evaluate a trained model on a separate held-out test set before using it. This project is a learning aid, not an agronomic diagnosis or treatment recommendation.</div>
+  </main>
+  <footer class="project-footer"><span>© <span id="year"></span> Nani Tulluri</span><a href="https://github.com/tullurinani/nani26-portfolio/tree/main/projects/paddy-crop-disease-detection" target="_blank" rel="noopener noreferrer">GitHub source ↗</a></footer>
+</div>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
