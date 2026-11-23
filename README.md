@@ -1,55 +1,40 @@
 # NANI26 Portfolio
 
-A responsive portfolio website with a simple learning-mode admin dashboard. The visual update uses a warm stone, terracotta and botanical-green palette, subtle CSS 3D depth, pointer-based tilt, scroll reveals, and a custom 404 page. It does not connect to Supabase or any external authentication/database service.
+Personal portfolio of Nani Tulluri — Trainee Software Engineer focused on Identity and Access Management, Saviynt, SailPoint, Java, SQL and application integrations.
 
-## Visual update
+**Live website:** https://nani26.shop/
 
-- `assets/css/theme-refinement.css` contains the updated light editorial colour system and motion details.
-- The hero portrait and project illustrations use subtle 3D perspective and hover movement.
-- Scroll reveals are enabled where supported and respect reduced-motion preferences.
-- `404.html` provides a branded page for missing URLs on GitHub Pages.
-- The existing page content, portfolio sections, contact-link configuration, admin dashboard and local article logic are retained.
+## Website sections
+
+- **About:** professional introduction and education.
+- **Experience:** current Trainee Software Engineer role and IAM learning focus.
+- **Skills:** IAM / IGA, Java, integration, database and development tools.
+- **Projects:** academic projects and hands-on IAM labs.
+- **Learning notes:** short, visitor-readable explainers on IAM and integration concepts.
+- **Contact:** working email, phone, WhatsApp, LinkedIn and GitHub links.
 
 ## Run locally
 
-1. Extract the ZIP file.
-2. Open the `nani26-portfolio` folder in VS Code.
-3. Install/use the VS Code **Live Server** extension.
-4. Right-click `index.html` and choose **Open with Live Server**.
-5. Open `admin.html` from the website or visit `http://127.0.0.1:5500/admin.html` (the port may differ).
+1. Clone or download this repository.
+2. Open the folder in VS Code.
+3. Start the site with the VS Code **Live Server** extension, or another local HTTP server.
+4. Open the local URL provided by the server.
 
-Use a local web server because the JavaScript files use ES modules. Do not open the HTML files directly with `file://`.
+Use a local web server because the site uses JavaScript modules. Do not open index.html directly with the file:// protocol.
 
-## Learning-mode admin login
+## Project structure
 
-The demo credentials are hardcoded in `assets/js/config.js`. The admin login compares the entered email and password with those values:
+- index.html — portfolio page, metadata and structured data.
+- assets/css/style.css — main layout and base styles.
+- assets/css/theme-refinement.css — warm editorial colour theme.
+- assets/css/portfolio-upgrade.css — responsive, interaction and accessibility refinements.
+- assets/js/app.js — mobile navigation, contact links, learning notes, dialogs and motion effects.
+- assets/img/ — profile image and favicon.
+- 404.html — custom not-found page.
+- CNAME — custom domain configuration.
 
-- Correct credentials: the admin dashboard opens.
-- Incorrect credentials: access is rejected and an error is displayed.
-- Sign out: clears the current tab's demo session.
+## Updating content
 
-This is intentionally a beginner exercise, not secure authentication. Anyone can inspect browser JavaScript and find hardcoded credentials. Do not deploy this version with real or reused passwords, and do not use it to protect sensitive information.
+Edit the relevant section in index.html. To update the learning notes, edit the learningNotes array in assets/js/app.js. Contact details are configured near the top of that file and are also shown in the homepage markup as fallback links.
 
-## Article storage
-
-Articles are stored in the browser's `localStorage` under the key `nani26_articles`.
-
-- Create, edit and delete articles from `admin.html`.
-- Tick **Publish immediately** to show an article in the public portfolio.
-- Unpublished articles remain drafts in the admin dashboard.
-- Data is local to that browser and device. It is not shared with visitors or synchronized across devices.
-- Clearing browser site data may delete the saved articles.
-
-## Where to learn the code
-
-- `admin.html` — admin login and dashboard interface.
-- `assets/js/config.js` — learning-mode admin settings.
-- `assets/js/app.js` — public email, phone, WhatsApp, LinkedIn and GitHub contact links, plus the portfolio interactions.
-- `assets/js/admin.js` — credential comparison, session handling, and article create/read/update/delete logic.
-- `assets/js/app.js` — public contact-link setup, published article display, 3D pointer interaction and scroll reveals.
-- `assets/css/theme-refinement.css` — updated palette and visual effects.
-- `404.html` — branded missing-page experience.
-
-## Later upgrade
-
-When you are comfortable with JavaScript authentication concepts, replace the demo login and local storage with a proper backend authentication provider and database. Never rely on hardcoded browser credentials for a publicly deployed admin system.
+This is a static portfolio hosted with GitHub Pages. It does not include a server-side admin system or a shared content database.
