@@ -37,14 +37,15 @@ def prepare_image(image: Image.Image, image_size: tuple[int, int] = IMAGE_SIZE) 
 
 
 def load_classifier(model_path: str | Path) -> Any:
-    try:
-        from tensorflow.keras.models import load_model
-    except ImportError as exc:  # pragma: no cover - requires optional TensorFlow dependency
-        raise RuntimeError("TensorFlow is required. Install the project requirements first.") from exc
-
     path = Path(model_path)
     if not path.is_file():
         raise FileNotFoundError(f"Model file not found: {path}. Train a model first using train.py.")
+
+    try:
+        from tensorflow.keras.models import load_model
+    except ImportError as exc:  # pragma: no cover - requires optional TensorFlow dependency
+        raise RuntimeError("TensorFlow is required to load a trained model. Install requirements-ml.txt.") from exc
+
     return load_model(path)
 
 
