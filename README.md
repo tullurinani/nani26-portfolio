@@ -43,7 +43,8 @@ Articles are stored in the browser's `localStorage` under the key `nani26_articl
 ## Where to learn the code
 
 - `admin.html` — admin login and dashboard interface.
-- `assets/js/config.js` — demo email/password and public contact links.
+- `assets/js/config.js` — learning-mode admin settings.
+- `assets/js/app.js` — public email, phone, WhatsApp, LinkedIn and GitHub contact links, plus the portfolio interactions.
 - `assets/js/admin.js` — credential comparison, session handling, and article create/read/update/delete logic.
 - `assets/js/app.js` — public portfolio behavior, published article display, 3D pointer interaction and scroll reveals.
 - `assets/css/theme-refinement.css` — updated palette and visual effects.
