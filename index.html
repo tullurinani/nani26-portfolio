@@ -3,15 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nani Tulluri | Saviynt & IAM Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Nani Tulluri, a Trainee Software Engineer focused on Saviynt, Identity and Access Management, integrations, SQL and automation.">
   <meta name="theme-color" content="#f3f0e8">
-  <meta property="og:title" content="Nani Tulluri | IAM & Saviynt Portfolio">
-  <meta property="og:description" content="Learning, building and documenting Identity & Access Management solutions.">
+  <meta name="author" content="Nani Tulluri">
+  <meta name="description" content="Nani Tulluri is a Trainee Software Engineer focused on Identity and Access Management, Saviynt, SailPoint, Java, SQL and application integrations.">
+  <link rel="canonical" href="https://nani26.shop/">
+  <title>Nani Tulluri | IAM, Saviynt & Java Portfolio</title>
+
   <meta property="og:type" content="website">
+  <meta property="og:title" content="Nani Tulluri | IAM & Software Engineering">
+  <meta property="og:description" content="Explore Nani Tulluri's work and learning in IAM, Saviynt, SailPoint, Java and application integrations.">
   <meta property="og:url" content="https://nani26.shop/">
   <meta property="og:image" content="https://nani26.shop/assets/img/nani-profile.png">
-  <!-- Google Analytics 4 -->
+  <meta property="og:image:alt" content="Nani Tulluri">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nani Tulluri | IAM & Software Engineering">
+  <meta name="twitter:description" content="Trainee Software Engineer focused on IAM, Saviynt, Java and integrations.">
+  <meta name="twitter:image" content="https://nani26.shop/assets/img/nani-profile.png">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFWPRP09K7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,116 +27,280 @@
     gtag('js', new Date());
     gtag('config', 'G-GFWPRP09K7');
   </script>
+
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/nani-profile.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/theme-refinement.css">
+  <link rel="stylesheet" href="assets/css/portfolio-upgrade.css">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Nani Tulluri",
     "url": "https://nani26.shop/",
+    "email": "mailto:tullurinani26@gmail.com",
+    "telephone": "+917675851745",
     "jobTitle": "Trainee Software Engineer",
-    "knowsAbout": ["Identity and Access Management", "Saviynt", "SailPoint IdentityIQ", "SQL", "JDBC", "Python", "REST APIs"]
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/nanitulluri/",
+      "https://github.com/tullurinani"
+    ],
+    "knowsAbout": [
+      "Identity and Access Management",
+      "Identity Governance and Administration",
+      "Saviynt EIC",
+      "SailPoint IdentityIQ",
+      "Java",
+      "SQL",
+      "JDBC",
+      "REST APIs"
+    ]
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="noise-overlay" aria-hidden="true"></div>
+
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Nani26 home"><span class="brand-mark">N<span>26</span></span><span class="brand-name">NANI<span>26</span></span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav" id="mainNav">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#articles">Articles</a><a href="#contact" class="nav-contact">Contact <span>↗</span></a>
+    <a class="brand" href="#home" aria-label="Nani26 home">
+      <span class="brand-mark">N<span>26</span></span>
+      <span class="brand-name">NANI<span>26</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mainNav" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#notes">Learning notes</a>
+      <a href="#contact" class="nav-contact">Contact <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero section-shell" id="home">
+  <main id="main-content">
+    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse-dot"></span> IAM • IGA • APPLICATION INTEGRATIONS • Saviynt</div>
+        <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> IDENTITY • ACCESS • INTEGRATIONS</div>
         <p class="hero-kicker">Hello, I'm</p>
-        <h1>Nani <span class="gradient-text">Tulluri.</span></h1>
+        <h1 id="hero-title">Nani <span class="gradient-text">Tulluri.</span></h1>
         <h2 class="hero-role">Trainee Software Engineer <span class="role-divider">/</span> <span>IAM &amp; Saviynt Focus</span></h2>
-        <p class="hero-description">I’m building my career in Identity and Access Management, with hands-on learning across Saviynt EIC, SailPoint IdentityIQ, JDBC integrations, SQL and identity lifecycle processes.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#projects">Explore my work <span>↗</span></a><a class="btn btn-ghost" href="#contact">Let's connect</a></div>
-        <div class="hero-meta"><span><i class="meta-icon">⌁</i> Hyderabad, India</span><span><i class="meta-icon">◷</i> Learning by building</span></div>
+        <p class="hero-description">I’m building practical experience in Identity and Access Management, with a focus on Saviynt EIC, SailPoint IdentityIQ, Java, SQL and enterprise application integrations.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#contact">Let's connect</a>
+        </div>
+        <div class="hero-socials" aria-label="Professional profiles">
+          <a href="https://www.linkedin.com/in/nanitulluri/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tullurinani" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:tullurinani26@gmail.com">Email <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta">
+          <span><i class="meta-icon" aria-hidden="true">⌁</i> Hyderabad, India</span>
+          <span><i class="meta-icon" aria-hidden="true">◷</i> Learning by building</span>
+        </div>
       </div>
-      <div class="hero-visual">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="profile-frame"><img src="assets/img/nani-profile.png" alt="Portrait used on Nani Tulluri’s portfolio" class="profile-photo"></div>
-        <div class="float-card float-card-top"><span class="float-icon shield">◇</span><span><b>Identity Security</b><small>Access • Governance • Trust</small></span></div>
-        <div class="float-card float-card-bottom"><span class="status-indicator"></span><span><b>Always learning</b><small>Build · Test · Improve</small></span></div>
+
+      <div class="hero-visual" aria-label="Nani Tulluri profile">
+        <div class="orbit orbit-one" aria-hidden="true"></div>
+        <div class="orbit orbit-two" aria-hidden="true"></div>
+        <div class="profile-frame">
+          <img src="assets/img/nani-profile.png" alt="Portrait of Nani Tulluri" class="profile-photo" width="640" height="720" fetchpriority="high">
+        </div>
+        <div class="float-card float-card-top">
+          <span class="float-icon" aria-hidden="true">◇</span>
+          <span><b>Identity Security</b><small>Access · Governance · Trust</small></span>
+        </div>
+        <div class="float-card float-card-bottom">
+          <span class="status-indicator" aria-hidden="true"></span>
+          <span><b>Always learning</b><small>Build · Test · Improve</small></span>
+        </div>
         <div class="visual-caption">01 / THE PERSON BEHIND THE BUILD</div>
       </div>
-      <div class="hero-scroll"><span></span> SCROLL TO EXPLORE</div>
+      <div class="hero-scroll" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
     </section>
 
-    <section class="intro-strip"><div class="section-shell strip-inner"><span>IDENTITY GOVERNANCE</span><b>✳</b><span>ACCESS MANAGEMENT</span><b>✳</b><span>INTEGRATION</span><b>✳</b><span>AUTOMATION</span><b>✳</b><span>CONTINUOUS LEARNING</span></div></section>
+    <section class="intro-strip" aria-label="Areas of interest">
+      <div class="section-shell strip-inner">
+        <span>IDENTITY GOVERNANCE</span><b aria-hidden="true">✳</b>
+        <span>ACCESS MANAGEMENT</span><b aria-hidden="true">✳</b>
+        <span>JAVA &amp; SQL</span><b aria-hidden="true">✳</b>
+        <span>APPLICATION INTEGRATION</span><b aria-hidden="true">✳</b>
+        <span>AUTOMATION</span>
+      </div>
+    </section>
 
-    <section class="section-shell section-block" id="about">
-      <div class="section-heading"><div><span class="section-index">01 — ABOUT</span><h2>Curious mind.<br><span class="gradient-text">Security-first thinking.</span></h2></div><p class="section-lede">A little about the person, the path and the work I’m growing into.</p></div>
+    <section class="section-shell section-block" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <div><span class="section-index">01 — ABOUT</span><h2 id="about-title">Curious mind.<br><span class="gradient-text">Security-first thinking.</span></h2></div>
+        <p class="section-lede">A little about my background, the work I do and the technical areas I’m growing in.</p>
+      </div>
       <div class="about-grid">
-        <div class="about-photo-card"><img src="assets/img/nani-profile.png" alt="Portrait used on Nani Tulluri’s portfolio"><div class="photo-label">NANI TULLURI <span>·</span> IAM / TECHNOLOGY</div></div>
-        <div class="about-content"><p class="large-copy">I’m a <strong>Trainee Software Engineer</strong> focused on learning how organizations manage digital identities and secure access to applications.</p><p>My current learning journey is centered on Identity Governance and Administration (IGA), especially Saviynt EIC. I enjoy understanding how identities, accounts, entitlements, approvals and provisioning connect across enterprise systems.</p><p>I learn best by documenting concepts, configuring lab environments, troubleshooting integrations and turning what I learn into practical notes that others can use.</p>
-          <div class="about-facts"><div><span class="fact-number">01</span><span><b>Focus</b><small>Saviynt &amp; IAM</small></span></div><div><span class="fact-number">02</span><span><b>Approach</b><small>Hands-on learning</small></span></div><div><span class="fact-number">03</span><span><b>Goal</b><small>Build secure integrations</small></span></div></div>
+        <div class="about-photo-card">
+          <img src="assets/img/nani-profile.png" alt="Nani Tulluri" width="640" height="720" loading="lazy">
+          <div class="photo-label">NANI TULLURI <span>·</span> IAM / TECHNOLOGY</div>
+        </div>
+        <div class="about-content">
+          <p class="large-copy">I’m a <strong>Trainee Software Engineer</strong> interested in how organizations manage digital identities and secure access to applications.</p>
+          <p>My current focus is Identity Governance and Administration (IGA), especially Saviynt EIC. I’m learning how identities, accounts, entitlements, approvals and provisioning work together across enterprise systems.</p>
+          <p>Alongside IAM, I build my software foundation through Java, object-oriented programming, SQL and integration concepts. I enjoy hands-on labs, troubleshooting and documenting what I learn.</p>
+          <div class="about-facts">
+            <div><span class="fact-number">01</span><span><b>Primary focus</b><small>IAM &amp; Saviynt</small></span></div>
+            <div><span class="fact-number">02</span><span><b>Development</b><small>Java &amp; SQL</small></span></div>
+            <div><span class="fact-number">03</span><span><b>Approach</b><small>Hands-on learning</small></span></div>
+          </div>
+          <div class="education-card">
+            <span class="education-icon" aria-hidden="true">EDU</span>
+            <div><span class="card-overline">EDUCATION</span><h3>B.Tech in Data Science</h3><p>Malla Reddy Engineering College <span>·</span> 2026</p></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-shell section-block" id="experience">
-      <div class="section-heading"><div><span class="section-index">02 — EXPERIENCE &amp; PRACTICE</span><h2>Learning in the<br><span class="gradient-text">real world.</span></h2></div><p class="section-lede">My professional role and the IAM areas I have been exploring through guided practice and lab work.</p></div>
-      <div class="experience-card"><div class="experience-date">CURRENT ROLE</div><div class="experience-main"><div class="experience-title-row"><div><h3>Trainee Software Engineer</h3><p class="company-line">SecureSpunk Technologies <span>·</span> IAM / Identity Security learning focus</p></div><span class="work-chip">Professional experience</span></div><p>Developing practical knowledge across Identity Governance and Administration, Saviynt EIC, SailPoint IdentityIQ and enterprise application integrations.</p><div class="experience-tags"><span>Saviynt EIC</span><span>SailPoint IIQ</span><span>JDBC</span><span>Active Directory</span><span>SQL</span></div></div></div>
+    <section class="section-shell section-block" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <div><span class="section-index">02 — EXPERIENCE</span><h2 id="experience-title">Learning in the<br><span class="gradient-text">real world.</span></h2></div>
+        <p class="section-lede">My current professional role and the hands-on areas I’ve been exploring.</p>
+      </div>
+      <div class="experience-card">
+        <div class="experience-date">CURRENT ROLE</div>
+        <div class="experience-main">
+          <div class="experience-title-row">
+            <div><h3>Trainee Software Engineer</h3><p class="company-line">SecureSpunk Technologies <span>·</span> IAM / Identity Security</p></div>
+            <span class="work-chip">Current position</span>
+          </div>
+          <p>Building practical knowledge across Identity Governance and Administration, Saviynt EIC, SailPoint IdentityIQ and enterprise application integrations. Working through platform concepts, technical documentation and hands-on learning scenarios.</p>
+          <div class="experience-tags"><span>Saviynt EIC</span><span>SailPoint IIQ</span><span>JDBC</span><span>Active Directory</span><span>SQL</span></div>
+        </div>
+      </div>
       <div class="practice-grid">
-        <article class="practice-card"><div class="practice-icon">◈</div><span class="card-overline">SAVIYNT EIC</span><h3>Platform learning &amp; configuration</h3><p>Practiced and reviewed identity warehouse role imports, access requests, SoD rule-set architecture, technical rules, Joiner/Leaver processes, access certification campaigns and analytics reports.</p><div class="mini-tags"><span>Identity Warehouse</span><span>JML</span><span>SoD</span><span>Certifications</span></div></article>
-        <article class="practice-card"><div class="practice-icon">⌘</div><span class="card-overline">SAILPOINT IDENTITYIQ</span><h3>Connector and directory lab</h3><p>Worked through a local IdentityIQ lab with JDBC/delimited sources, identity attribute mapping, account onboarding and Active Directory / LDAP integration troubleshooting.</p><div class="mini-tags"><span>JDBC</span><span>LDAP</span><span>Active Directory</span><span>Identity mapping</span></div></article>
-        <article class="practice-card"><div class="practice-icon">⌗</div><span class="card-overline">INTEGRATION PRACTICE</span><h3>JDBC application onboarding</h3><p>Building a learning exercise around database connectivity, user and account imports, entitlement reconciliation and SQL-based account provisioning.</p><div class="mini-tags"><span>MySQL</span><span>SQL</span><span>Account import</span><span>Provisioning</span><span class="in-progress">In progress</span></div></article>
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">◈</div><span class="card-overline">SAVIYNT EIC</span>
+          <h3>IGA platform learning</h3>
+          <p>Reviewed identity warehouse, imports, access requests, workflow concepts, SoD rule sets, technical rules, Joiner / Mover / Leaver processes, certifications and analytics.</p>
+          <div class="mini-tags"><span>Identity Warehouse</span><span>JML</span><span>SoD</span><span>Certifications</span></div>
+        </article>
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">⌘</div><span class="card-overline">SAILPOINT IDENTITYIQ</span>
+          <h3>Connector and directory lab</h3>
+          <p>Worked through a local IdentityIQ lab with JDBC and delimited sources, identity and account mapping, application onboarding and Active Directory / LDAP integration.</p>
+          <div class="mini-tags"><span>JDBC</span><span>LDAP</span><span>Active Directory</span></div>
+        </article>
+        <article class="practice-card">
+          <div class="practice-icon" aria-hidden="true">⌗</div><span class="card-overline">SOFTWARE DEVELOPMENT</span>
+          <h3>Java and integration basics</h3>
+          <p>Strengthening Core Java, OOP, Collections, SQL and JDBC fundamentals, while exploring JSON, REST APIs and practical scripting for integration tasks.</p>
+          <div class="mini-tags"><span>Core Java</span><span>OOP</span><span>SQL</span><span>REST APIs</span></div>
+        </article>
       </div>
     </section>
 
-    <section class="section-shell section-block" id="skills">
-      <div class="section-heading"><div><span class="section-index">03 — SKILLS</span><h2>Tools I use.<br><span class="gradient-text">Concepts I explore.</span></h2></div><p class="section-lede">A growing toolkit for identity security, integrations and software development.</p></div>
+    <section class="section-shell section-block" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <div><span class="section-index">03 — TECHNICAL SKILLS</span><h2 id="skills-title">Tools I use.<br><span class="gradient-text">Concepts I explore.</span></h2></div>
+        <p class="section-lede">A practical snapshot of my current technical toolkit. I keep the list focused on areas I’ve studied or practised.</p>
+      </div>
       <div class="skills-layout">
         <div class="skill-group"><div class="skill-group-head"><span>01</span><h3>IAM &amp; IGA</h3></div><div class="skill-pills"><span>Saviynt EIC</span><span>SailPoint IdentityIQ</span><span>Identity Lifecycle</span><span>Joiner / Mover / Leaver</span><span>Access Requests</span><span>Access Certifications</span><span>Segregation of Duties</span><span>RBAC fundamentals</span></div></div>
-        <div class="skill-group"><div class="skill-group-head"><span>02</span><h3>Integration &amp; Data</h3></div><div class="skill-pills"><span>JDBC</span><span>SQL</span><span>MySQL</span><span>REST APIs</span><span>JSON</span><span>LDAP</span><span>Active Directory</span><span>Postman</span></div></div>
-        <div class="skill-group"><div class="skill-group-head"><span>03</span><h3>Programming &amp; Tools</h3></div><div class="skill-pills"><span>Python — learning</span><span>Java fundamentals</span><span>HTML</span><span>CSS</span><span>JavaScript basics</span><span>Git</span><span>VS Code</span><span>Jupyter Notebook</span></div></div>
+        <div class="skill-group"><div class="skill-group-head"><span>02</span><h3>Java &amp; Programming</h3></div><div class="skill-pills"><span>Core Java</span><span>OOP</span><span>Collections</span><span>JDBC</span><span>Servlets fundamentals</span><span>Python scripting basics</span><span>HTML</span><span>CSS</span><span>JavaScript basics</span></div></div>
+        <div class="skill-group"><div class="skill-group-head"><span>03</span><h3>Integration &amp; Data</h3></div><div class="skill-pills"><span>SQL</span><span>MySQL</span><span>REST APIs</span><span>JSON</span><span>Postman</span><span>LDAP</span><span>Active Directory</span></div></div>
+        <div class="skill-group"><div class="skill-group-head"><span>04</span><h3>Tools &amp; Platforms</h3></div><div class="skill-pills"><span>Git &amp; GitHub</span><span>Apache Tomcat</span><span>VS Code</span><span>Jupyter Notebook</span></div></div>
       </div>
-      <p class="skill-note"><span>NOTE</span> Skills are presented as a learning and practical-exposure snapshot. I aim to keep this section honest and update it as I gain deeper project experience.</p>
+      <p class="skill-note"><span>NOTE</span> These skills represent a mix of practical exposure, coursework and ongoing learning. Depth varies by topic.</p>
     </section>
 
-    <section class="section-shell section-block" id="projects">
-      <div class="section-heading"><div><span class="section-index">04 — SELECTED PROJECTS</span><h2>Practice made<br><span class="gradient-text">tangible.</span></h2></div><p class="section-lede">A mix of identity-security labs and academic software projects.</p></div>
+    <section class="section-shell section-block" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><span class="section-index">04 — SELECTED PROJECTS</span><h2 id="projects-title">Practice made<br><span class="gradient-text">tangible.</span></h2></div>
+        <p class="section-lede">Academic projects and practical labs that helped me apply programming, data and identity-management concepts.</p>
+      </div>
       <div class="projects-grid">
-        <article class="project-card project-featured"><div class="project-topline"><span>01 / IAM LAB</span><span class="project-status">Hands-on learning</span></div><div class="project-art art-iam"><div class="art-ring"></div><div class="art-lock">⌑</div><span class="art-label art-label-one">IDENTITY</span><span class="art-label art-label-two">ACCESS</span><span class="art-label art-label-three">GOVERNANCE</span></div><div class="project-body"><h3>Saviynt EIC — IAM practice</h3><p>Explored identity warehouse, role import, access request workflows, SoD rules, JML rule engineering, access reviews and analytics reporting.</p><div class="project-tech"><span>Saviynt</span><span>IGA</span><span>Access Governance</span></div></div></article>
-        <article class="project-card"><div class="project-topline"><span>02 / CONNECTOR LAB</span><span class="project-status">Lab environment</span></div><div class="project-art art-directory"><div class="directory-node node-a">IIQ</div><div class="directory-node node-b">AD</div><div class="directory-node node-c">JDBC</div><div class="directory-lines"></div></div><div class="project-body"><h3>SailPoint IdentityIQ + Active Directory</h3><p>Set up a local learning environment, connected directory resources and explored identity, account and attribute mapping.</p><div class="project-tech"><span>SailPoint IIQ</span><span>LDAP</span><span>Active Directory</span></div></div></article>
-        <article class="project-card"><div class="project-topline"><span>03 / ACADEMIC PROJECT</span><span class="project-status">Project work</span></div><div class="project-art art-rice"><div class="leaf leaf-a"></div><div class="leaf leaf-b"></div><div class="leaf leaf-c"></div><div class="scan-line"></div><span class="rice-label">CNN / IMAGE ANALYSIS</span></div><div class="project-body"><h3>Rice Plant Disease Detection</h3><p>Academic project exploring image preprocessing, CNN-based classification with TensorFlow/Keras and Grad-CAM explainability.</p><div class="project-tech"><span>Python</span><span>TensorFlow / Keras</span><span>OpenCV</span><span>Grad-CAM</span></div></div></article>
-        <article class="project-card"><div class="project-topline"><span>04 / COMPUTER VISION</span><span class="project-status">Academic project</span></div><div class="project-art art-driver"><div class="driver-eye eye-one"></div><div class="driver-eye eye-two"></div><div class="driver-frame"></div><span class="driver-label">DROWSINESS DETECTION</span></div><div class="project-body"><h3>Driver Drowsiness Detection</h3><p>Explored a computer-vision approach using Python, OpenCV and Haar cascade techniques to detect signs of drowsiness.</p><div class="project-tech"><span>Python</span><span>OpenCV</span><span>Haar Cascade</span></div></div></article>
+        <article class="project-card project-featured">
+          <div class="project-topline"><span>01 / WEB APPLICATION</span><span class="project-status">Academic project</span></div>
+          <div class="project-art project-art-resume" aria-hidden="true"><span class="project-art-label">RESUME</span><span class="project-art-orbit"></span><span class="project-art-node">AI</span></div>
+          <div class="project-body"><h3>AI Resume Screening &amp; Interview Evaluation</h3><p>Built a web application to parse PDF and DOCX resumes, generate interview questions, accept candidate video uploads and support administrator-led evaluation with email status updates.</p><div class="project-tech"><span>Python</span><span>Django</span><span>MySQL</span><span>PDF / DOCX</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>02 / IAM LAB</span><span class="project-status">Hands-on learning</span></div>
+          <div class="project-art project-art-iam" aria-hidden="true"><span class="project-art-ring"></span><span class="project-art-node">IGA</span><span class="project-art-label">IDENTITY · ACCESS · GOVERNANCE</span></div>
+          <div class="project-body"><h3>Saviynt EIC — IAM practice</h3><p>Explored identity warehouse, imports, access request workflows, SoD rules, Joiner / Mover / Leaver rule engineering, access reviews and analytics reporting.</p><div class="project-tech"><span>Saviynt</span><span>IGA</span><span>Access Governance</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>03 / CONNECTOR LAB</span><span class="project-status">Local lab</span></div>
+          <div class="project-art project-art-directory" aria-hidden="true"><span class="directory-node node-a">IIQ</span><span class="directory-node node-b">AD</span><span class="directory-node node-c">JDBC</span></div>
+          <div class="project-body"><h3>SailPoint IdentityIQ &amp; Active Directory</h3><p>Set up a local IdentityIQ lab, connected directory resources and practised JDBC / delimited application onboarding, identity mapping and LDAP troubleshooting.</p><div class="project-tech"><span>SailPoint IIQ</span><span>LDAP</span><span>Active Directory</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>04 / MACHINE LEARNING</span><span class="project-status">Academic project</span></div>
+          <div class="project-art project-art-crop" aria-hidden="true"><span class="crop-leaf crop-leaf-a"></span><span class="crop-leaf crop-leaf-b"></span><span class="crop-scan"></span><span class="project-art-label">CROP HEALTH ANALYSIS</span></div>
+          <div class="project-body"><h3>Paddy Crop Disease Detection</h3><p>Developed a CNN-based image-classification project to identify paddy crop diseases, with approximately 92% accuracy in the project evaluation.</p><div class="project-tech"><span>Python</span><span>CNN</span><span>TensorFlow / Keras</span></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-topline"><span>05 / COMPUTER VISION</span><span class="project-status">Academic project</span></div>
+          <div class="project-art project-art-driver" aria-hidden="true"><span class="driver-eye eye-one"></span><span class="driver-eye eye-two"></span><span class="driver-frame"></span><span class="project-art-label">DRIVER SAFETY</span></div>
+          <div class="project-body"><h3>Driver Drowsiness Detection</h3><p>Created a computer-vision prototype using eye-aspect-ratio checks to detect prolonged eye closure and trigger an alert.</p><div class="project-tech"><span>Python</span><span>OpenCV</span><span>dlib</span><span>EAR</span></div></div>
+        </article>
       </div>
     </section>
 
-    <section class="section-shell section-block article-section" id="articles">
-      <div class="section-heading"><div><span class="section-index">05 — NOTES &amp; ARTICLES</span><h2>Knowledge is better<br><span class="gradient-text">when shared.</span></h2></div><p class="section-lede">Practical notes, explainers and lessons from my IAM and software-development journey.</p></div>
-      <div class="article-toolbar"><span class="live-label"><i></i> LATEST WRITING</span><a href="admin.html" class="admin-link">Admin login ↗</a></div>
-      <div class="articles-grid" id="articlesGrid"><article class="article-card"><span class="article-category">IAM FUNDAMENTALS</span><h3>Understanding the Joiner, Mover and Leaver lifecycle</h3><p>A practical overview of how identity changes drive account creation, access updates and deprovisioning.</p><span class="article-date">STARTER NOTE</span></article><article class="article-card"><span class="article-category">SAVIYNT</span><h3>Identity, accounts and entitlements: how they connect</h3><p>Breaking down the core IGA objects and the relationships that make access governance possible.</p><span class="article-date">STARTER NOTE</span></article><article class="article-card"><span class="article-category">INTEGRATIONS</span><h3>What happens during JDBC application onboarding?</h3><p>A learning note on connection setup, imports, entitlement reconciliation and provisioning operations.</p><span class="article-date">STARTER NOTE</span></article></div>
-      <p class="articles-hint" id="articlesHint">Publish your own learning notes from the admin dashboard.</p>
+    <section class="section-shell section-block article-section" id="notes" aria-labelledby="notes-title">
+      <div class="section-heading">
+        <div><span class="section-index">05 — LEARNING NOTES</span><h2>Learn it.<br><span class="gradient-text">Understand it. Share it.</span></h2></div>
+        <p class="section-lede">Short explainers from the IAM and integration concepts I’m studying. Select a note to read more.</p>
+      </div>
+      <div class="article-toolbar"><span class="live-label"><i aria-hidden="true"></i> CONCEPT NOTES</span><span class="notes-caption">Updated as I learn</span></div>
+      <div class="articles-grid" id="notesGrid">
+        <p class="empty-articles">Loading learning notes…</p>
+      </div>
     </section>
 
-    <section class="contact-section" id="contact"><div class="section-shell contact-inner"><div><span class="section-index">06 — CONTACT</span><h2>Have an idea?<br><span class="gradient-text">Let's connect.</span></h2><p>I'm interested in learning from the IAM community, discussing identity-security concepts and connecting with people building secure systems.</p></div><div class="contact-card">
-          <span class="contact-overline">OPEN TO CONNECTIONS</span>
-          <a class="contact-row" id="emailLink" href="#"><span>Email</span><b id="emailText">tullurinani26@gmail.com</b><i>↗</i></a>
-          <a class="contact-row" id="phoneLink" href="#"><span>Phone</span><b id="phoneText">+91 76758 51745</b><i>↗</i></a>
-          <a class="contact-row" id="whatsappLink" href="#" target="_blank" rel="noopener"><span>WhatsApp</span><b id="whatsappText">Chat on WhatsApp</b><i>↗</i></a>
-          <a class="contact-row" id="linkedinLink" href="#" target="_blank" rel="noopener"><span>LinkedIn</span><b id="linkedinText">View LinkedIn</b><i>↗</i></a>
-          <a class="contact-row" id="githubLink" href="#" target="_blank" rel="noopener"><span>GitHub</span><b id="githubText">View GitHub</b><i>↗</i></a>
-        </div></div></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-shell contact-inner">
+        <div>
+          <span class="section-index">06 — CONTACT</span>
+          <h2 id="contact-title">Have an idea?<br><span class="gradient-text">Let's connect.</span></h2>
+          <p>I’m happy to connect with IAM professionals, developers and people working on identity security, integrations and enterprise technology.</p>
+          <a class="btn btn-primary contact-cta" href="mailto:tullurinani26@gmail.com">Send me an email <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="contact-card" aria-label="Contact details">
+          <span class="contact-overline">CONTACT DETAILS</span>
+          <a class="contact-row" id="emailLink" href="mailto:tullurinani26@gmail.com"><span>Email</span><b id="emailText">tullurinani26@gmail.com</b><i aria-hidden="true">↗</i></a>
+          <a class="contact-row" id="phoneLink" href="tel:+917675851745"><span>Phone</span><b id="phoneText">+91 76758 51745</b><i aria-hidden="true">↗</i></a>
+          <a class="contact-row" id="whatsappLink" href="https://wa.me/917675851745" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><b id="whatsappText">Chat on WhatsApp</b><i aria-hidden="true">↗</i></a>
+          <a class="contact-row" id="linkedinLink" href="https://www.linkedin.com/in/nanitulluri/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><b id="linkedinText">View LinkedIn profile</b><i aria-hidden="true">↗</i></a>
+          <a class="contact-row" id="githubLink" href="https://github.com/tullurinani" target="_blank" rel="noopener noreferrer"><span>GitHub</span><b id="githubText">View GitHub profile</b><i aria-hidden="true">↗</i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer"><div class="section-shell footer-inner"><a class="brand" href="#home"><span class="brand-mark">N<span>26</span></span><span class="brand-name">NANI<span>26</span></span></a><p>Designed to learn. Built to share.</p><span class="footer-copy">© <span id="year"></span> Nani Tulluri</span></div></footer>
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <a class="brand" href="#home" aria-label="Back to top"><span class="brand-mark">N<span>26</span></span><span class="brand-name">NANI<span>26</span></span></a>
+      <p>Designed to learn. Built to share.</p>
+      <div class="footer-links"><a href="https://www.linkedin.com/in/nanitulluri/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/tullurinani" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:tullurinani26@gmail.com">Email</a></div>
+      <span class="footer-copy">© <span id="year"></span> Nani Tulluri</span>
+    </div>
+  </footer>
 
-  <dialog class="article-dialog" id="articleDialog"><button class="dialog-close" id="dialogClose" aria-label="Close article">×</button><div class="dialog-content" id="dialogContent"></div></dialog>
+  <dialog class="article-dialog" id="noteDialog" aria-labelledby="noteDialogTitle">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Close learning note">×</button>
+    <div class="dialog-content" id="dialogContent"></div>
+  </dialog>
   <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
