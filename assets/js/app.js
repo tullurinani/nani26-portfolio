@@ -19,14 +19,24 @@ mainNav?.querySelectorAll("a").forEach(link => link.addEventListener("click", ()
 
 $("#year").textContent = new Date().getFullYear();
 
-function setContactLink(id, textId, value, label, prefix = "") {
-  const link = $(id); const text = $(textId);
-  if (!value) { link?.classList.add("is-hidden"); return; }
-  link.href = prefix + value; text.textContent = label || value; link.classList.remove("is-hidden");
+function setContactLink(id, textId, value, label, href) {
+  const link = $(id);
+  const text = $(textId);
+  if (!link || !text) return;
+  if (!value || !href) {
+    link.classList.add("is-hidden");
+    return;
+  }
+  link.href = href;
+  text.textContent = label || value;
+  link.classList.remove("is-hidden");
 }
-setContactLink("#emailLink", "#emailText", PROFILE.email, PROFILE.email, "mailto:");
-setContactLink("#linkedinLink", "#linkedinText", PROFILE.linkedin, "View LinkedIn");
-setContactLink("#githubLink", "#githubText", PROFILE.github, "View GitHub");
+
+setContactLink("#emailLink", "#emailText", PROFILE.email, PROFILE.email, `mailto:${PROFILE.email}`);
+setContactLink("#phoneLink", "#phoneText", PROFILE.phone, "+91 76758 51745", `tel:+91${PROFILE.phone}`);
+setContactLink("#whatsappLink", "#whatsappText", PROFILE.phone, "Chat on WhatsApp", `https://wa.me/91${PROFILE.phone}`);
+setContactLink("#linkedinLink", "#linkedinText", PROFILE.linkedin, "View LinkedIn", PROFILE.linkedin);
+setContactLink("#githubLink", "#githubText", PROFILE.github, "View GitHub", PROFILE.github);
 
 const dialog = $("#articleDialog");
 const dialogContent = $("#dialogContent");
