@@ -182,3 +182,35 @@ section[id] { scroll-margin-top: 100px; }
 @media (max-width: 680px) {
   .project-links a { width: 100%; justify-content: center; min-height: 42px; }
 }
+
+
+/* Searchable learning notes */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap; border: 0;
+}
+.notes-tools {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 14px; flex-wrap: wrap; margin: 18px 0 22px;
+}
+.notes-search {
+  flex: 1 1 280px; min-width: 0; max-width: 480px;
+  min-height: 46px; padding: 11px 15px;
+  border: 1px solid rgba(52,78,65,.22); border-radius: 12px;
+  background: rgba(255,255,255,.66); color: #26332c;
+  font: 500 13px var(--font); outline-offset: 3px;
+}
+.notes-search::placeholder { color: #879087; }
+.notes-library-link {
+  color: #365445; font-size: 12px; font-weight: 800;
+  text-decoration: none; border-bottom: 1px solid rgba(54,84,69,.3);
+  padding-bottom: 4px;
+}
+.notes-library-link:hover { color: #a85d45; border-color: currentColor; }
+@media (max-width: 560px) {
+  .notes-tools { align-items: stretch; }
+  .notes-search { max-width: none; flex-basis: 100%; }
+  .notes-library-link { align-self: flex-start; }
+}
