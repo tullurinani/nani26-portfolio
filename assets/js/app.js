@@ -86,6 +86,30 @@ const learningNotes = [
     ]
   },
   {
+    category: "SAVIYNT / RULE ENGINEERING",
+    title: "How Saviynt rules support identity lifecycle automation",
+    excerpt: "Where technical rules and user update rules fit into Joiner, Mover and Leaver processes.",
+    paragraphs: [
+      "Saviynt rules help automate actions and decisions across identity and access-management processes. The exact rule type, trigger and configuration depend on the use case and the tenant setup.",
+      "Technical rules are commonly used to evaluate technical conditions and support account-related actions. Examples include create, update or disable account scenarios when an identity or account event meets the configured conditions.",
+      "User update rules respond to changes in identity attributes. For example, a department, manager, location or employment-status change may require related identity updates or downstream access review.",
+      "For a Joiner, the process may create an identity and initiate required account and access actions. For a Mover, changed attributes can trigger access evaluation. For a Leaver, the process should support timely access removal or account disablement according to policy.",
+      "Before enabling a rule, confirm its trigger, conditions, affected objects, execution order and expected result. Test positive, negative and boundary cases in a non-production environment, and review logs to verify the outcome."
+    ]
+  },
+  {
+    category: "SAVIYNT / ANALYTICS",
+    title: "Using Saviynt analytics for access visibility",
+    excerpt: "How reports can help teams understand identities, accounts, entitlements and governance activity.",
+    paragraphs: [
+      "Analytics in an IGA platform helps administrators and governance teams turn identity and access data into information they can review and act on.",
+      "Reports can be designed around questions such as which users have a particular entitlement, which accounts are inactive, what access is assigned to an application, or which certification items remain pending.",
+      "A typical report setup involves defining the business question, selecting the relevant data source or query, choosing the fields and filters, validating the result set and making the report available to the intended audience.",
+      "Good reports are accurate, scoped to the audience and useful for a defined operational or audit purpose. Avoid exposing unnecessary personal data, and validate totals and sample records before relying on a report.",
+      "Scheduling, delivery and permissions depend on the platform configuration. Always check who can run or view a report and whether the underlying data is current."
+    ]
+  },
+  {
     category: "ACCESS GOVERNANCE",
     title: "Preventive and detective SoD controls",
     excerpt: "How segregation-of-duties checks can help reduce conflicting access.",
@@ -139,6 +163,8 @@ function renderLearningNotes() {
     card.tabIndex = 0;
     card.setAttribute("role", "button");
     card.setAttribute("aria-label", "Read note: " + note.title);
+    card.setAttribute("aria-haspopup", "dialog");
+    card.setAttribute("aria-controls", "noteDialog");
 
     const category = document.createElement("span");
     category.className = "article-category";
