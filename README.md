@@ -13,6 +13,17 @@ Personal portfolio of Nani Tulluri — Trainee Software Engineer focused on Iden
 - **Learning notes:** short, visitor-readable explainers on IAM and integration concepts.
 - **Contact:** working email, phone, WhatsApp, LinkedIn and GitHub links.
 
+
+## Learning library
+
+The [IAM & Software Engineering Learning Library](docs/learning/README.md) contains study notes and practice exercises covering:
+
+- IGA lifecycle, identity/account/entitlement concepts, access requests, certifications and SoD.
+- Saviynt identity data flow, rule-engineering concepts, application onboarding and analytics.
+- SailPoint IdentityIQ onboarding, Active Directory / LDAP, Java collections, JDBC, REST APIs and SQL.
+
+These are learning resources, not claims of vendor certification or production implementation. Product-specific behaviour should be checked against the relevant version's official documentation.
+
 ## Run locally
 
 1. Clone or download this repository.
