@@ -6,6 +6,11 @@ on:
       - "projects/driver-drowsiness-detection/**"
       - "projects/paddy-crop-disease-detection/**"
       - ".github/workflows/projects.yml"
+      - "index.html"
+      - "assets/js/**"
+      - "assets/css/**"
+      - "docs/learning/**"
+      - "tests/**"
   pull_request:
     paths:
       - "projects/driver-drowsiness-detection/**"
