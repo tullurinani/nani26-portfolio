@@ -16,11 +16,29 @@ on:
       - "projects/driver-drowsiness-detection/**"
       - "projects/paddy-crop-disease-detection/**"
       - ".github/workflows/projects.yml"
+      - "index.html"
+      - "assets/js/**"
+      - "assets/css/**"
+      - "docs/learning/**"
+      - "tests/**"
 
 permissions:
   contents: read
 
 jobs:
+  portfolio-smoke-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run portfolio content tests
+        run: python -m unittest discover -s tests -p "test_portfolio.py" -v
+      - name: Check portfolio JavaScript syntax
+        run: node --input-type=module --check < assets/js/app.js
+
   driver-drowsiness:
     runs-on: ubuntu-latest
     steps:
