@@ -110,6 +110,102 @@ const learningNotes = [
     ]
   },
   {
+    category: "SAVIYNT / ACCESS REQUESTS",
+    title: "Access Request System: request-to-fulfilment flow",
+    excerpt: "Follow a governed access request from catalogue selection through approval, provisioning and verification.",
+    paragraphs: [
+      "An access request is a governed way to ask for an application, role or entitlement. A request catalogue should present clear names, descriptions, eligibility and ownership.",
+      "A typical flow validates the request, evaluates policy, routes approval to configured owners, and sends approved changes to the target application.",
+      "Approval is not the same as successful fulfilment. Provisioning performs the target change, while reconciliation helps verify the resulting account or entitlement state.",
+      "For troubleshooting, check request status, approval history, policy evaluation, provisioning task details, connector response and the next reconciliation result.",
+      "Practice by drawing a request flow for a fictional finance role. Include requester, manager, application owner, SoD check, target operation and failure handling."
+    ]
+  },
+  {
+    category: "SAVIYNT / IDENTITY WAREHOUSE",
+    title: "Identity Warehouse: how identity and account data fit together",
+    excerpt: "Understand the relationship between trusted identity sources, imported accounts and access data.",
+    paragraphs: [
+      "An identity warehouse brings identity information and connected application access into a place where governance processes can evaluate it.",
+      "A trusted source may provide employee attributes such as employee ID, department, manager and employment status. Connected applications provide account and entitlement information.",
+      "Correlation links imported accounts to identities. Incorrect correlation can lead to incomplete access visibility, incorrect reviews or unsafe provisioning decisions.",
+      "When investigating missing data, check source connectivity, import scope, attribute mapping, unique identifiers, job results and correlation rules.",
+      "Use fictional records to practise mapping a trusted source identity to an Active Directory account and a JDBC application account."
+    ]
+  },
+  {
+    category: "SAVIYNT / APPLICATION ONBOARDING",
+    title: "Application onboarding: JDBC and Web Services concepts",
+    excerpt: "Compare database-based and API-based integration considerations when connecting target applications.",
+    paragraphs: [
+      "Application onboarding connects a target system to an IGA platform so identity, account and entitlement data can be governed.",
+      "A JDBC integration commonly reads or updates relational database records through a driver, connection URL, schema mapping and controlled SQL operations.",
+      "A Web Services integration communicates through API endpoints, HTTP methods, authentication, headers, request and response payloads, pagination and error handling.",
+      "For either approach, confirm ownership, service-account permissions, unique account keys, attribute mappings, entitlement relationships and supported create, update or disable operations.",
+      "Test connectivity, import, correlation and provisioning separately in a non-production environment. Record expected results and safe rollback steps."
+    ]
+  },
+  {
+    category: "SAVIYNT / ANALYTICS",
+    title: "Analytics and reporting: ask a useful access question",
+    excerpt: "Turn identity and entitlement data into reports that support operations and governance.",
+    paragraphs: [
+      "A useful analytics report begins with a question, such as which users hold a sensitive entitlement, which accounts are inactive or which reviews are overdue.",
+      "Define the audience, data scope, fields, filters and expected output before building the report. Validate sample records and totals against a known source.",
+      "Reports can support operations, audit preparation and access governance, but a report alone does not remediate access or prove that a target system has changed.",
+      "Apply least-privilege access to reports and avoid exposing personal data that the audience does not need.",
+      "Practice by defining a report for all fictional users who hold a privileged group, including the business question, columns, filters and report owner."
+    ]
+  },
+  {
+    category: "SAVIYNT / GOVERNANCE",
+    title: "Roles and RBAC fundamentals",
+    excerpt: "Learn how role-based access control can simplify access assignment and review.",
+    paragraphs: [
+      "Role-Based Access Control (RBAC) groups permissions around job responsibilities or business functions. Users receive access through assigned roles rather than through unrelated individual permissions.",
+      "A business role may represent a job function, while an IT or application role may group technical entitlements. Exact role models vary by organisation and platform.",
+      "Good role design needs an owner, clear description, membership criteria, entitlement mapping, approval process and periodic review.",
+      "Poorly designed roles can accumulate excessive access or become difficult to maintain when job responsibilities change.",
+      "Practice by defining a fictional Finance Analyst role with a business owner, eligibility criteria, mapped access and a review schedule."
+    ]
+  },
+  {
+    category: "SAVIYNT / TROUBLESHOOTING",
+    title: "A repeatable checklist for import and provisioning failures",
+    excerpt: "Use evidence from jobs, mappings and connector responses to narrow down integration issues.",
+    paragraphs: [
+      "Start by identifying the exact object and operation: identity import, account aggregation, entitlement import or provisioning.",
+      "Check whether the job ran, whether the source was reachable, whether credentials are valid and whether filters returned the expected records.",
+      "For imported records, validate schema fields, data types, unique identifiers and correlation. For provisioning, inspect the request, approval state, connector task and target response.",
+      "Separate a platform-side failure from a target-system rejection. Record timestamps, safe sample identifiers and error messages without exposing secrets or unnecessary personal data.",
+      "After a fix, rerun a controlled test and verify the target state through an independent read or reconciliation."
+    ]
+  },
+  {
+    category: "JAVA / JDBC",
+    title: "JDBC troubleshooting from a Java developer's perspective",
+    excerpt: "Review connection, query, resource and transaction issues in database integrations.",
+    paragraphs: [
+      "JDBC allows Java applications to communicate with relational databases through a driver and standard interfaces.",
+      "Common connection problems include an incorrect URL, unavailable host or port, driver mismatch, TLS configuration and invalid credentials.",
+      "Query problems may come from incorrect table or column names, parameter types, permissions, constraints or unexpected null values.",
+      "Use PreparedStatement for parameter values and try-with-resources to close Connection, Statement and ResultSet objects safely.",
+      "When investigating an error, capture the exception type and safe diagnostic context. Never print passwords, tokens or sensitive records into logs."
+    ]
+  },
+  {
+    category: "IAM / INTERVIEW PREPARATION",
+    title: "How to explain an IAM integration scenario in an interview",
+    excerpt: "Structure your answer around source, mapping, correlation, governance, provisioning and verification.",
+    paragraphs: [
+      "Start with the business purpose: which application is being connected and why the organisation needs identity and access visibility.",
+      "Explain the source and connector type, then describe connectivity, authentication, schema or API mapping and the unique account identifier.",
+      "Describe how identities and accounts are correlated, how entitlements are imported and how requests or lifecycle events are governed.",
+      "Finish with provisioning operations, reconciliation, monitoring, error handling and evidence. Be clear about what you personally practised versus what you understand conceptually.",
+      "A strong interview answer is structured, honest and specific. Use a fictional or lab example and explain how you tested the result."
+    ]
+  },
+  {
     category: "ACCESS GOVERNANCE",
     title: "Preventive and detective SoD controls",
     excerpt: "How segregation-of-duties checks can help reduce conflicting access.",
@@ -157,7 +253,20 @@ function renderLearningNotes() {
 
   notesGrid.replaceChildren();
 
-  learningNotes.forEach((note) => {
+  const query = ($("#notesSearch")?.value || "").trim().toLowerCase();
+  const visibleNotes = learningNotes.filter((note) =>
+    [note.category, note.title, note.excerpt, ...note.paragraphs].join(" ").toLowerCase().includes(query)
+  );
+
+  if (visibleNotes.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "empty-articles";
+    empty.textContent = "No learning notes match your search. Try another keyword.";
+    notesGrid.appendChild(empty);
+    return;
+  }
+
+  visibleNotes.forEach((note) => {
     const card = document.createElement("article");
     card.className = "article-card article-card-clickable note-card";
     card.tabIndex = 0;
@@ -196,7 +305,7 @@ function renderLearningNotes() {
   });
 }
 
-renderLearningNotes();
+$("#notesSearch")?.addEventListener("input", renderLearningNotes);\nrenderLearningNotes();
 
 $("#dialogClose")?.addEventListener("click", () => noteDialog?.close());
 noteDialog?.addEventListener("click", (event) => {
