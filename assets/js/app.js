@@ -305,7 +305,8 @@ function renderLearningNotes() {
   });
 }
 
-$("#notesSearch")?.addEventListener("input", renderLearningNotes);\nrenderLearningNotes();
+$("#notesSearch")?.addEventListener("input", renderLearningNotes);
+renderLearningNotes();
 
 $("#dialogClose")?.addEventListener("click", () => noteDialog?.close());
 noteDialog?.addEventListener("click", (event) => {
